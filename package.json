@@ -1,6 +1,7 @@
 {
   "name": "vue-html2pdf",
-  "version": "1.8.0",
+  "version": "1.8.0.1",
+  "vue-html2pdf":"https://github.com/SenhorLimao/vue-html2pdf",
   "description": "",
   "main": "dist/vue-html2pdf.ssr.js",
   "module": "dist/vue-html2pdf.esm.js",
