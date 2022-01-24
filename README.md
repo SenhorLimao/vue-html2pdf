@@ -1,3 +1,5 @@
+This was forked from https://github.com/kempsteven/vue-html2pdf adding a closePreview event
+
 # VueHTML2PDF Documentation
 
 #### Package Github:
@@ -203,6 +205,7 @@ This events can seen in the Usage Part
 | @hasPaginated               | This will be triggered after the pagination process.                                                                         |
 | @beforeDownload             | This will be triggered before the PDF generation and download. The event arguments contains an object `{ html2pdf, options, pdfContent }`, which can be used to have full control of html2pdf.js like e.g.(Add page count on each PDF page, Full control of jsPDF to design page, etc.), you will have to set the props `:enable-download`, `:preview-modal` to false so it will not generate the PDF. |
 | @hasDownloaded              | This will be triggered after downloading the PDF. The event arguments contains the Blob File of the generated PDF. This will NOT be trigerred if the props `enable-download` AND `preview-modal` is set to false. |
+| @closePreview               | This will be triggered after closing the Pdf previewdownloading the PDF. The event just emits a 'closePreview' string |
 
 #### Sample Use Case of @beforeDownload
 This is a sample Use case of `@beforeDownload` event.
@@ -236,6 +239,7 @@ Please refer to the html2pdf [Docs](https://www.npmjs.com/package/html2pdf.js#us
     @hasPaginated="hasPaginated()"
     @beforeDownload="beforeDownload($event)"
     @hasDownloaded="hasDownloaded($event)"
+    @closePreview="closePreview($event)"
     ref="html2Pdf"
 >
     <pdf-content slot="pdf-content" />
