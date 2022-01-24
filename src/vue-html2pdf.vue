@@ -284,6 +284,7 @@ export default {
 
 		closePreview () {
 			this.pdfFile = null
+			this.$emit('closePreview')
 		}
 	}
 }
